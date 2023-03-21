@@ -18,16 +18,14 @@ int value(char roman)
    case 'X':return 10;
    case 'L':return 50;
    case 'C':return 100;
-   case 'D':return 500;
-   case 'M':return 1000;
- }
+}
  return 0;
 };
 
 int romanToInt (string A)
 {
     int i, n, ans=0, p=0;
-    n=A.length()-1;
+    n=A.length();
 
     for( i=n; i>=0; i--)
     {
