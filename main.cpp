@@ -39,6 +39,18 @@ int romanToInt (string A)
     }
     return ans;
 }
+string intToRoman(int value){
+    string result="";
+    string roman_value[]= {"C","XC","L","XL","X","IX","V","IV","I"};
+    int number_value[]={100, 90, 50, 40, 10, 9, 5, 4, 1};
+    for (int i=0; i<9; i++){
+        while(value-number_value[i]>=0){
+            result += roman_value[i];
+            value -= number_value[i];
+        };
+    };
+    return result;
+}
 
 //Main Function
 int main() {
